@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+        <title>Spring Boot Authentication Sample Web App</title>
+    </head>
+
+    <body>
+        <h3>Página de login</h3>
+
+        <form action="/login" method="post">
+            <div><label> User Name : <input type="text" name="username"/> </label></div>
+            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><input type="submit" value="login"/></div>
+        </form>
+    </body>
+</html>
