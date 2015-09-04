@@ -1,7 +1,8 @@
 package com.lennonjesus.experiments.authentication.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -10,15 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-    @RequestMapping("/")
-    public String home(Model model) {
-        model.addAttribute("mensagem", "Olá!");
-        return "home";
-    }
+    private static final Logger LOGGER = LoggerFactory.getLogger(HomeController.class);
 
-    @RequestMapping("/free")
-    public String free() {
-        return "free";
+    @RequestMapping("/")
+    public String getHomePage() {
+        LOGGER.debug("Getting home page");
+        return "home";
     }
 
 
