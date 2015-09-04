@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Spring Boot Authentication Sample Web App</title>
+    </head>
+
+    <body>
+        <h1 th:inline="text">Prezado [[${#httpServletRequest.remoteUser}]], você não tem acesso a área solicitada.</h1>
+
+    </body>
+</html>

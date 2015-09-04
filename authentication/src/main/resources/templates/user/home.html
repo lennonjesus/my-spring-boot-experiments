@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Authentication Sample Web App</title>
+</head>
+
+<body>
+<h3>Página para usuários logados</h3>
+
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<form action="/logout" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+</body>
+</html>

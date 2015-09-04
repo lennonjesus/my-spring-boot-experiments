@@ -14,14 +14,4 @@ public class AuthenticationApplication {
         SpringApplication.run(AuthenticationApplication.class, args);
     }
 
-//    @Bean
-//    public ViewResolver viewResolver() {
-//        System.out.println("Inside View Resolver...");
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setViewClass(JstlView.class);
-//        viewResolver.setPrefix("/templates");
-//        viewResolver.setSuffix(".html");
-//
-//        return viewResolver;
-//    }
 }
