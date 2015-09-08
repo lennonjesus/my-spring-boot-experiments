@@ -3,12 +3,14 @@ package com.lennonjesus.experiments.authentication.form.validator;
 import com.lennonjesus.experiments.authentication.form.UserCreateForm;
 import com.lennonjesus.experiments.authentication.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 /**
  * @author Lennon Jesus
  */
+@Component
 public class UserCreateFormValidator implements Validator {
 
     private final UserService userService;

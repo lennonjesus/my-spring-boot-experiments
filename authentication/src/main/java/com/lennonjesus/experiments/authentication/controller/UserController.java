@@ -27,6 +27,7 @@ import javax.validation.Valid;
 /**
  * Created by lennonjesus on 04/09/15.
  */
+@Controller
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
