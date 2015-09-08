@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+
+    <user id="1"
+          email="lennon.jesus@gmail.com"
+          password_hash="$2a$10$pz86SuNEFzn0.VMWDcs37u87kJlKU/NsLr04Mr1w8kXHi875miYZy"
+          role="USER"
+    />
+
+    <user id="2"
+          email="demo@localhost"
+          password_hash="$2a$10$ebyC4Z5WtCXXc.HGDc1Yoe6CLFzcntFmfse6/pTj7CeDY5I05w16C"
+          role="ADMIN"
+    />
+
+</dataset>

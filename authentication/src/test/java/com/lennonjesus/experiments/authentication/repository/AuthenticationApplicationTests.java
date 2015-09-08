@@ -1,4 +1,4 @@
-package demo;
+package com.lennonjesus.experiments.authentication.repository;
 
 import com.lennonjesus.experiments.authentication.AuthenticationApplication;
 import org.junit.Test;
