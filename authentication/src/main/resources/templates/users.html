@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>List of Users</title>
+</head>
+<body>
+<nav role="navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/user/create">Create a new user</a></li>
+    </ul>
+</nav>
+
+<h1>List of Users</h1>
+
+
+    <div th:each="user : ${users}">
+        <span>
+            <a th:href="@{/user/} + ${user.id}" th:text="${user.email}"></a>
+        </span>
+        <span th:text="${user.role}"></span>
+    </div>
+
+</body>
+</html>

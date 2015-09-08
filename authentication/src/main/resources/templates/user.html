@@ -1,8 +1,7 @@
-<#-- @ftlvariable name="user" type="com.lennonjesus.experiments.authentication.domain.User" -->
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <title>User details</title>
 </head>
 <body>
@@ -14,8 +13,14 @@
 
 <h1>User details</h1>
 
-<p>E-mail: ${user.email}</p>
+<p>
+    E-mail:
+    <span th:text="${user.email}"/>
+</p>
 
-<p>Role: ${user.role}</p>
+<p>
+    Role:
+    <span th:text="${user.role}"/>
+</p>
 </body>
 </html>
