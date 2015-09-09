@@ -2,24 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
-    <title>Home page</title>
+    <title>My Spring Boot Experiments</title>
 </head>
 <body>
-<nav role="navigation">
-    <ul>
-        <li><a href="/login">Log in</a></li>
-        <li>
-            <form th:action="@{/logout}" method="post">
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                <button type="submit">Log out</button>
-            </form>
-        </li>
-        <li><a th:href="@{/user/} + ${currentUser.id}">View myself</a></li>
+    <div th:replace="fragments/header :: header">...</div>
 
-        <li><a href="/user/create">Create a new user</a></li>
-        <li><a href="/users">View all users</a></li>
-
-    </ul>
-</nav>
+    <div id="content">
+        <h1>My Spring Boot Experiments</h1>
+        <h3>Authentication Sample with Spring Boot + Thymeleaf + JPA</h3>
+    </div>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>My Spring Boot Experiments</title>
+</head>
+<body>
+<nav role="navigation" th:fragment="header">
+
+    <a href="/">Home</a>
+
+    |
+
+    <th:block th:if="${currentUser == null}">
+        <a href="/login">Log in</a>
+    </th:block>
+
+    <th:block th:if="${currentUser != null}">
+
+        <a th:href="@{/user/} + ${currentUser.id}">
+            <span th:text="${currentUser.user.email}"></span>
+        </a>
+        |
+        <th:block th:if="${currentUser.role.name == 'ADMIN'}">
+            <a href="/user/create">Create user</a>
+            |
+            <a href="/users">All users</a>
+        </th:block>
+
+        |
+
+        <form th:action="@{/logout}" method="post" style="display: inline">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <button type="submit">Log out</button>
+        </form>
+
+    </th:block>
+
+</nav>
+
+</body>
+</html>
